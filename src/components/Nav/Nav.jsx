@@ -30,18 +30,18 @@ function Nav() {
 				<Navbar.Collapse>
 					{collapseItems.map((item, index) => (
 						<Navbar.CollapseItem key={index}>
-							<Text h4 b>
-								<Link
-									css={{
-										color: '$text',
-										'&:hover': {
-											color: '$warning',
-										},
-									}}
-									href={`/${PATH[item]}`}
+							<Text h4 b transform='capitalize'>
+								<RouterLink
+									// css={{
+									// 	color: '$text',
+									// 	'&:hover': {
+									// 		color: '$warning',
+									// 	},
+									// }}
+									to={`/${PATH[item]}`}
 								>
 									{item}
-								</Link>
+								</RouterLink>
 							</Text>
 						</Navbar.CollapseItem>
 					))}
