@@ -2,7 +2,7 @@ import React from 'react';
 import Social from './Social';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link, Navbar, Text } from '@nextui-org/react';
+import { Navbar, Text } from '@nextui-org/react';
 import { useState } from 'react';
 import { NavLink as RouterLink } from 'react-router-dom';
 import { PATH } from '../../routes.js';
