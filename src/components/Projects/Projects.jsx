@@ -9,7 +9,7 @@ function Projects() {
 		<Container css={{ mt: 2, w: '90%' }}>
 			<Divider y={1} />
 			<Text weight='extrabold' color='inherit' h3 size={55}>
-				Projectos
+				Proyectos
 			</Text>
 			<Divider y={1} />
 
