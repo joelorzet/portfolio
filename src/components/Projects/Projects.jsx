@@ -1,5 +1,5 @@
 import { Divider } from '@mui/material';
-import { Container, Text, useModal } from '@nextui-org/react';
+import { Container, Text } from '@nextui-org/react';
 import React from 'react';
 import CardProyect from './CardProyect';
 import { proyects } from './proyects.js';

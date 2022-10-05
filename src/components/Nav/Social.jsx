@@ -1,5 +1,5 @@
 import { GitHub, LinkedIn, Twitter } from '@mui/icons-material';
-import { Button, Container, Row, Tooltip, Link } from '@nextui-org/react';
+import { Button, Tooltip, Link } from '@nextui-org/react';
 import Media from './links.js';
 
 const style = {
