@@ -1,5 +1,5 @@
 import { Divider } from '@mui/material';
-import { Container, Text } from '@nextui-org/react';
+import { Container, Text, Grid } from '@nextui-org/react';
 import React from 'react';
 import CardProyect from './CardProyect';
 import { proyects } from './proyects.js';
@@ -13,21 +13,24 @@ function Projects() {
 			</Text>
 			<Divider y={1} />
 
-			<Container css={{ dflex: 'center', fd: 'row', gap: '2rem', mt: '2rem', mb: '2rem' }}>
+			<Grid.Container gap={4}>
 				{proyects?.map((e) => (
-					<CardProyect
-						title={e.title}
-						subtitle={e.subtitle}
-						imageUrl={e.imageUrl}
-						imagesUrl={e.imagesUrl}
-						description={e.description}
-						repository={e.repository}
-						deploy={e.deploy}
-						contribution={e.contribution}
-						tech={e.tech}
-					/>
+					<Grid xs={12} sm={4} md={4} lg={4}>
+						<CardProyect
+							title={e.title}
+							subtitle={e.subtitle}
+							imageUrl={e.imageUrl}
+							imagesUrl={e.imagesUrl}
+							description={e.description}
+							repository={e.repository}
+							deploy={e.deploy}
+							contribution={e.contribution}
+							tech={e.tech}
+							key={e.title}
+						/>
+					</Grid>
 				))}
-			</Container>
+			</Grid.Container>
 		</Container>
 	);
 }

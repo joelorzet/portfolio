@@ -1,4 +1,4 @@
-import {  Text, Card, Col, Row, Button, Modal, useModal } from '@nextui-org/react';
+import { Text, Card, Col, Row, Button, Modal, useModal } from '@nextui-org/react';
 import React from 'react';
 import ModalDetails from './ModalDetails';
 import next from './next.png';
@@ -13,12 +13,13 @@ function CardProyect({
 	deploy,
 	tech,
 	contribution,
+	key,
 }) {
 	const { setVisible, bindings } = useModal();
 
 	return (
 		<>
-			<Card css={{ w: '40%', h: '400px' }}>
+			<Card css={{ w: '100%', h: '400px' }} id={key}>
 				<Card.Header
 					isBlurred
 					css={{

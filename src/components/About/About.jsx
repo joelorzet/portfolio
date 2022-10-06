@@ -1,17 +1,17 @@
-import { Container, Text, Divider } from '@nextui-org/react';
+import { Container, Grid, Text, Divider } from '@nextui-org/react';
 import React from 'react';
 import Image from './Image.jsx';
 
 function About() {
 	return (
-		<Container css={{ mt: 2, w: '90%' }}>
+		<Container alignItems='center' css={{ mt: 2, w: '90%' }}>
 			<Divider y={1} />
 			<Text weight='extrabold' color='inherit' h3 size={55}>
 				About
 			</Text>
 			<Divider y={1} />
-			<Container css={{ d: 'flex', ai: 'center', jc: 'space-between' }}>
-				<Container css={{ maxWidth: '50%' }}>
+			<Grid.Container gap={4} justify='center'>
+				<Grid xs={12} sm={12} lg={6} md={6} css={{ fd: 'column' }}>
 					<Text color='inherit' weight='semibold' css={{ mb: '2rem' }} size={18}>
 						Hola soy Joel, desarrollador FullStack JavaScript apasionado por el Frontend
 					</Text>
@@ -21,10 +21,12 @@ function About() {
 						capacidades al máximo! En mis tiempos libres utilizo mucho la música y la cocina para despejarme
 						mientras se aprovecha un momento en familia!
 					</Text>
-				</Container>
+				</Grid>
 
-				<Image />
-			</Container>
+				<Grid xs={12} sm={12} lg={6} md={6} justify='center'>
+					<Image />
+				</Grid>
+			</Grid.Container>
 		</Container>
 	);
 }
