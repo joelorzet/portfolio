@@ -13,7 +13,7 @@ function Projects() {
 			</Text>
 			<Divider y={1} />
 
-			<Grid.Container gap={4}>
+			<Grid.Container gap={4} justify='center'>
 				{proyects?.map((e) => (
 					<Grid xs={12} sm={4} md={4} lg={4}>
 						<CardProyect
