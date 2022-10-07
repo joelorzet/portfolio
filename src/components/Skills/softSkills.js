@@ -5,7 +5,7 @@ export const softSkills = [
 	},
 	{
 		id: 2,
-		title: 'Autodidacta',
+		title: 'Asertividad',
 	},
 	{
 		id: 3,
@@ -17,7 +17,7 @@ export const softSkills = [
 	},
 	{
 		id: 5,
-		title: 'Curiosidad',
+		title: 'Comprensión',
 	},
 	{
 		id: 6,
@@ -25,7 +25,7 @@ export const softSkills = [
 	},
 	{
 		id: 7,
-		title: 'Empático',
+		title: 'Empatía',
 	},
 	{
 		id: 8,
@@ -33,15 +33,11 @@ export const softSkills = [
 	},
 	{
 		id: 9,
-		title: 'Escucha',
+		title: 'Escucha activa',
 	},
 	{
 		id: 10,
 		title: 'Flexibilidad',
-	},
-	{
-		id: 11,
-		title: 'Proactividad',
 	},
 	{
 		id: 12,
@@ -50,10 +46,6 @@ export const softSkills = [
 	{
 		id: 13,
 		title: 'Resiliente',
-	},
-	{
-		id: 14,
-		title: 'Solucionador de problemas',
 	},
 	{
 		id: 15,
