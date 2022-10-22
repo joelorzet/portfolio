@@ -1,14 +1,12 @@
-import React from 'react';
-import Social from './Social';
+import React, { useState } from 'react';
+import Social from '../Social/Social.jsx';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Navbar, Text } from '@nextui-org/react';
-import { useState } from 'react';
-import { NavLink as RouterLink } from 'react-router-dom';
-import { PATH } from '../../routes.js';
+import { Navbar } from '@nextui-org/react';
+import NavItem from '../NavItem/NavItem.jsx';
+import { navigationItems } from './navRoutes.js';
 
 function Nav() {
-	const collapseItems = ['home', 'projects', 'about', 'skills'];
 	const [isActive, setActive] = useState(false);
 	const iconHandle = () => setActive(!isActive);
 
@@ -28,44 +26,19 @@ function Nav() {
 				</Navbar.Brand>
 
 				<Navbar.Collapse>
-					{collapseItems.map((item, index) => (
+					{navigationItems.map((item, index) => (
 						<Navbar.CollapseItem key={index}>
-							<RouterLink
-								style={{
-									decoration: 'none',
-								}}
-								to={PATH[item]}
-							>
-								<Text h4 b transform='capitalize'>
-									{item}
-								</Text>
-							</RouterLink>
+							<NavItem itemName={item.name} link={item.link} />
 						</Navbar.CollapseItem>
 					))}
 				</Navbar.Collapse>
 
 				<Navbar.Content enableCursorHighlight activeColor='warning' hideIn='xs' variant='underline'>
-					<RouterLink to={PATH.home}>
-						<Text h4 b>
-							Home
-						</Text>
-					</RouterLink>
-					<RouterLink to={PATH.projects}>
-						<Text h4 b>
-							Projects
-						</Text>
-					</RouterLink>
-
-					<RouterLink to={PATH.about}>
-						<Text h4 b>
-							About
-						</Text>
-					</RouterLink>
-					<RouterLink to={PATH.skills}>
-						<Text h4 b>
-							Skills
-						</Text>
-					</RouterLink>
+					{navigationItems?.map((e, id) => (
+						<div key={id}>
+							<NavItem itemName={e.name} link={e.link} />
+						</div>
+					))}
 				</Navbar.Content>
 			</Navbar>
 		</>
